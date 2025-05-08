@@ -4,7 +4,7 @@
     font-family: 'Inter-Variable';
     src: url('../fonts/Inter-Variable.woff2') format('woff2 supports variations');
     src: url('../fonts/Inter-Variable.woff2') format('woff2-variations');
-    font-weight: 100 700; /* Диапазон веса (например, от 100 до 900) */
+    font-weight: 100 900; /* Диапазон веса (например, от 100 до 900) */
     font-stretch: 75% 125%; /* Диапазон ширины (опционально) */
     font-style: oblique 0deg 20deg; /* Наклон (опционально) */
     font-display: swap; /* Чтобы текст не "прыгал" при загрузке */
