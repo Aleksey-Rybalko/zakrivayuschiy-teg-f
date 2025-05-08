@@ -123,10 +123,6 @@
     -1px 1px 1px grey;
 }
 
-.card__icon-button {
-  border: none;
-  background-color: transparent;
-}
 
 .card_button {
   display: flex;
@@ -237,12 +233,12 @@
 }
 
 .card__icon-button {
-  box-sizing: border-box;
   inline-size: 38px;
   block-size: 38px;
   padding-inline: 0px;
   padding-block: 0px;
   margin-right: 4px;
+  background-color: transparent;
   border: solid 2px transparent;
   transition: border 0.3s ease;
 }

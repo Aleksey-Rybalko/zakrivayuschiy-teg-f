@@ -3,7 +3,7 @@
     --font-inter-var: 'Inter-Variable';
     --font-press2p: 'PressStart2P-Regular';
     --card-text-color: #000000;
-    --font-weight-card: 400;
+    --font-weight-card: 400, 785;
     --font-weight-heading:700;
     --content-width: clamp(375px, 100vw, 700px);
     --content-border:solid 2px #000000;
