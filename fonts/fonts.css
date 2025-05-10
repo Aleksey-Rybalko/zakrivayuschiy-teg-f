@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Inter-Variable';
-    src: url('../fonts/Inter-Variable.woff2') format('woff2 supports variations');
-    src: url('../fonts/Inter-Variable.woff2') format('woff2-variations');
+    src: url('Inter-Variable.woff2') format('woff2 supports variations');
+    src: url('Inter-Variable.woff2') format('woff2-variations');
     font-weight: 400 785; /* Диапазон веса (например, от 100 до 900) */
     font-stretch: 75% 125%; /* Диапазон ширины (опционально) */
     font-style: oblique 0deg 20deg; /* Наклон (опционально) */
@@ -11,8 +11,8 @@
   }
   
   @font-face {
-    font-family: 'PressStart2P-Regular';
-    src: url('../fonts/PressStart2P-Regular.woff') format('woff');
+    font-family: 'PressStart2P';
+    src: url('PressStart2P-Regular.woff') format('woff');
     font-weight: normal;
     font-display: swap;
   }

@@ -20,7 +20,7 @@
   grid-template-rows: repeat(3, min-content);
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter-var);
+  font-family: var(--font-card), sans-serif;
   color: var(--card-text-color);
   font-variation-settings: "wght" var(--font-weight-card);
   font-size: 18px;
@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   margin: var(--header-margin) 0;
-  font-family: var(--font-press2p);
+  font-family: var(--font-accent), fantasy;
   gap: 20px;
   justify-content: center;
   line-height: 100%;
@@ -59,6 +59,12 @@
   text-align: center;
 }
 
+.main {
+  display: grid;
+  justify-content: center;
+  gap: 50px;
+}
+
 .card-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -73,7 +79,7 @@
 }
 
 .card__title {
-  font-family: var(--font-inter-var), sans-serif;
+  font-family: var(--font-card), sans-serif;
   font-variation-settings: "wght" var(--font-weight-heading);
   font-size: 18px;
   padding-inline: 10px;
@@ -82,22 +88,27 @@
 
 .img-content {
   position: relative;
+  inline-size: 100%;
   z-index: 1;
+  block-size: 700px;
 }
 
 .img-content__img {
-  inline-size: 100%;
-  height: auto;
+  width:100%;
+  height: 100%;
   object-fit: cover;
   object-position:center;
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
 }
 
 .img-logo {
   position: absolute;
-  font-family: var(--font-press2p);
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   right: 25px;
   top: 23px;
+  opacity: 50%;
   text-shadow: -1px -1px 0 var(--text-shadow-logo),
     1px -1px 0 var(--text-shadow-logo), -1px 1px 0 var(--text-shadow-logo),
     1px 1px 0 var(--text-shadow-logo);
@@ -111,38 +122,24 @@
   padding-inline: 25px;
   padding-block: 25px 2px;
   line-height: 115%;
-  text-shadow: 1px 1px 1px grey, -1px -1px 1px grey, 1px -1px 1px grey,
-    -1px 1px 1px grey;
 }
-
-.card_memory {
-  padding-inline: 25px;
-  padding-block: 25px;
-  line-height: 115%;
-  text-shadow: 1px 1px 1px grey, -1px -1px 1px grey, 1px -1px 1px grey,
-    -1px 1px 1px grey;
-}
-
 
 .card_button {
   display: flex;
   justify-self: end;
-  margin-block-end: 20px;
+  margin-block: 25px;
   margin-inline-end: 25px;
 }
 
 .button-style {
   position: relative;
   display: flex;
-  font-family: var(--font-press2p);
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   font-weight: 400;
   border: solid 2px #000;
   background-color: #fff;
-}
-
-.button-style-transform {
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.3s ease;
   overflow: hidden;
 }
 
@@ -192,7 +189,6 @@
 .save-dialog {
   border: solid 2px #000;
   max-inline-size: 353px;
-  max-block-size: 191px;
 }
 
 .save-dialog[open] {
@@ -237,7 +233,7 @@
   block-size: 38px;
   padding-inline: 0px;
   padding-block: 0px;
-  margin-right: 4px;
+  margin-right: 7px;
   background-color: transparent;
   border: solid 2px transparent;
   transition: border 0.3s ease;
@@ -298,14 +294,17 @@
 
 .like-icon.is-liked .core {
   fill: red;
+  
 }
 
 .like-icon.is-liked .main-body {
   fill: red;
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: red;
+  transition-delay: 0.06s;
 }
 
 .like-icon .heart {
@@ -326,30 +325,6 @@
 .like-icon:not(.is-liked) .contour {
   fill: var(--contour-color);
   transition-delay: 0s;
-}
-
-@keyframes heart-scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks-transparent {
-  0% {
-    fill: transparent;
-  }
-  50% {
-    fill: var(--sparks-color);
-  }
-  100% {
-    fill: transparent;
-  }
 }
 
 /*Фильтры*/
@@ -403,6 +378,10 @@
     --content-width: 100vw;
   }
 
+  .img-content {
+    block-size: 375px;
+  }
+
   .save {
     flex-direction: column;
     max-inline-size: 306px;
@@ -420,6 +399,5 @@
 
   .save-dialog {
     max-inline-size: 341px;
-    max-block-size: 191px;
   }
 }
